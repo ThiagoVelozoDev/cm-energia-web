@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { MessageCircle, ChevronRight, Shield, Award, Users } from 'lucide-react';
+import { MessageCircle, ChevronRight, Shield, Award } from 'lucide-react';
 import { getWhatsAppLink, whatsappMessages } from '../../services/whatsapp';
 import fachadaImg from '../../assets/fachada.png';
 import solarImg from '../../assets/solar.png';
