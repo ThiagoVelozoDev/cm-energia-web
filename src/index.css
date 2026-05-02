@@ -929,6 +929,8 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   .hero-col-text { flex: unset; }
   /* Título grande no mobile e texto justificado */
   .hero-title { font-size: clamp(2.4rem, 9vw, 3rem); text-align: justify; }
+  /* Fachada com altura mínima no mobile */
+  .hero-img-fachada { min-height: 260px; object-fit: contain; }
   .hero-desc { text-align: justify; }
   /* WhatsApp flutuante maior no mobile */
   .whatsapp-float { bottom: 20px; right: 16px; }

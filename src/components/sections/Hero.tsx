@@ -109,6 +109,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="hero-img-fachada"
             style={{
               width: '100%',
               height: 'auto',
