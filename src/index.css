@@ -927,8 +927,9 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   .hero-cols { flex-direction: column; gap: 24px; }
   .hero-col-images { align-items: stretch; flex: unset; width: 100%; }
   .hero-col-text { flex: unset; }
-  /* Título menor no mobile */
-  .hero-title { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  /* Título menor no mobile e texto justificado */
+  .hero-title { font-size: clamp(1.75rem, 7vw, 2.25rem); text-align: justify; }
+  .hero-desc { text-align: justify; }
   /* WhatsApp flutuante maior no mobile */
   .whatsapp-float { bottom: 20px; right: 16px; }
   .whatsapp-float-btn { width: 68px; height: 68px; }
