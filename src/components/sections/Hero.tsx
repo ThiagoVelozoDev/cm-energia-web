@@ -111,17 +111,13 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             style={{
               width: '100%',
-              maxWidth: '100%',
               height: 'auto',
-              aspectRatio: '2/1',
-              minHeight: 280,
-              minWidth: 0,
-              objectFit: 'cover',
+              display: 'block',
+              objectFit: 'contain',
               borderRadius: '1.5rem',
               boxShadow: '0 8px 32px rgba(0,0,0,0.13)',
               border: '4px solid var(--color-primary)',
-              background: '#fff',
-              marginTop: 0,
+              background: 'var(--color-dark)',
             }}
           />
           <motion.img
@@ -132,16 +128,13 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
             style={{
               width: '100%',
-              maxWidth: '100%',
               height: 'auto',
-              aspectRatio: '2/1',
-              minHeight: 280,
-              minWidth: 0,
-              objectFit: 'cover',
+              display: 'block',
+              objectFit: 'contain',
               borderRadius: '1.5rem',
               boxShadow: '0 8px 32px rgba(0,0,0,0.13)',
               border: '4px solid var(--color-primary)',
-              background: '#fff',
+              background: 'var(--color-dark)',
             }}
           />
         </div>
