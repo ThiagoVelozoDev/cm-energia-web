@@ -14,27 +14,19 @@ function ServiceCard({ service }: { service: SiteService }) {
     if (el) setClamped(el.scrollHeight > el.clientHeight + 2);
   }, [service.description]);
 
-  const isFeatured = service.featured;
-
   return (
-    <div className={`card service-card-fixed${isFeatured ? ' service-card-featured' : ''}`}>
-      <div
-        className="card-icon"
-        style={{
-          fontSize: '1.4rem',
-          background: isFeatured ? 'rgba(255,255,255,0.2)' : 'var(--gradient-brand)',
-        }}
-      >
+    <div className="card service-card-fixed service-card-featured">
+      <div className="card-icon" style={{ fontSize: '1.4rem', background: 'rgba(255,255,255,0.2)' }}>
         {service.emoji}
       </div>
-      <h3 className="card-title" style={isFeatured ? { color: 'white' } : undefined}>
+      <h3 className="card-title" style={{ color: 'white' }}>
         {service.title}
       </h3>
       <p
         ref={descRef}
         className="card-desc"
         style={{
-          ...(isFeatured ? { color: 'rgba(255,255,255,0.82)' } : {}),
+          color: 'rgba(255,255,255,0.82)',
           ...(!expanded ? { display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' } : {}),
         }}
       >
@@ -43,7 +35,7 @@ function ServiceCard({ service }: { service: SiteService }) {
       {(clamped || expanded) && (
         <button
           onClick={() => setExpanded(p => !p)}
-          className={`btn btn-sm${isFeatured ? ' btn-white' : ' btn-ghost'}`}
+          className="btn btn-sm btn-white"
           style={{ marginTop: 10, padding: '4px 0' }}
         >
           {expanded ? '← Fechar' : 'Saiba mais →'}
