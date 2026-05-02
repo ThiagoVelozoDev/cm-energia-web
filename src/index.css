@@ -955,7 +955,7 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
 /* ── Admin responsive ───────────────────────────────────────── */
 .admin-stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 16px;
   margin-bottom: 20px;
   align-items: stretch;
@@ -974,9 +974,6 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   display: flex;
   gap: 8px;
   flex-shrink: 0;
-}
-@media (max-width: 768px) {
-  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .admin-stats-grid { grid-template-columns: 1fr 1fr; }
