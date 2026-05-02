@@ -346,12 +346,26 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
   position: relative;
   z-index: 1;
+}
+.hero-cols {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 32px;
+}
+.hero-col-text {
+  flex: 1;
+  min-width: 0;
+}
+.hero-col-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
 }
 .hero-badge {
   display: inline-flex;
@@ -896,7 +910,6 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { display: none; }
   .solar-inner { grid-template-columns: 1fr; gap: 48px; padding: clamp(48px, 8vw, 80px) clamp(16px, 4vw, 32px); }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -910,6 +923,15 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   .form-row { grid-template-columns: 1fr; }
   .steps-connector { display: none; }
   .hero-stats { gap: 20px; }
+  /* Hero: empilha imagens abaixo do texto */
+  .hero-cols { flex-direction: column; gap: 24px; }
+  .hero-col-images { align-items: stretch; flex: unset; width: 100%; }
+  .hero-col-text { flex: unset; }
+  /* Título menor no mobile */
+  .hero-title { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  /* WhatsApp flutuante maior no mobile */
+  .whatsapp-float { bottom: 20px; right: 16px; }
+  .whatsapp-float-btn { width: 68px; height: 68px; }
 }
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; width: 100%; }

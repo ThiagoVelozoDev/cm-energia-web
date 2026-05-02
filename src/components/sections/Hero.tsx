@@ -14,9 +14,9 @@ const stats = [
 export default function Hero() {
   return (
     <section className="hero" aria-label="Banner principal">
-      <div className="hero-inner" style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch', gap: 32 }}>
+      <div className="hero-inner hero-cols">
         {/* Coluna da esquerda: textos */}
-        <div style={{ flex: 1, minWidth: 0 }}>
+        <div className="hero-col-text">
           <motion.div
             className="hero-badge"
             initial={{ opacity: 0, y: -16 }}
@@ -81,7 +81,7 @@ export default function Hero() {
           </motion.div>
         </div>
         {/* Coluna da direita: imagem + selo */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16, flex: 1, minWidth: 0 }}>
+        <div className="hero-col-images">
           <motion.div
             initial={{ opacity: 0, y: -24 }}
             animate={{ opacity: 1, y: 0 }}
