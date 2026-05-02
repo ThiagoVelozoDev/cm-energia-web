@@ -955,8 +955,8 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
 /* ── Admin responsive ───────────────────────────────────────── */
 .admin-stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
   margin-bottom: 20px;
   align-items: stretch;
 }

@@ -16,19 +16,19 @@ export default function AdminStats() {
   };
 
   const numInput = (field: keyof SiteStats, label: string, suffix?: string) => (
-    <div style={{ background: 'white', borderRadius: 12, padding: 20, boxShadow: '0 1px 4px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column' }}>
-      <label style={{ display: 'block', fontSize: '0.72rem', fontWeight: 700, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 8, lineHeight: 1.3 }}>{label}</label>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <input
-          type="number"
-          min={0}
-          value={form[field]}
-          onChange={e => setForm(p => ({ ...p, [field]: Number(e.target.value) }))}
-          style={{ flex: 1, padding: '12px 14px', border: '1.5px solid #E2E8F0', borderRadius: 8, fontSize: '1.25rem', fontWeight: 700, color: '#0F172A', outline: 'none', fontFamily: 'var(--font-title)', textAlign: 'center' }}
-        />
-        {suffix && <span style={{ fontSize: '1rem', color: '#64748B', fontWeight: 600 }}>{suffix}</span>}
-      </div>
-      <p style={{ fontSize: '0.75rem', color: '#94A3B8', marginTop: 6 }}>Exibido como: <strong>+{form[field]}{suffix || ''}</strong></p>
+    <div style={{ background: 'white', borderRadius: 12, padding: '20px 16px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: 8 }}>
+      <label style={{ fontSize: '0.68rem', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.07em', lineHeight: 1.3 }}>{label}</label>
+      <input
+        type="number"
+        min={0}
+        value={form[field]}
+        onChange={e => setForm(p => ({ ...p, [field]: Number(e.target.value) }))}
+        style={{ width: '100%', padding: '8px 4px', border: 'none', borderBottom: '2px solid #E2E8F0', borderRadius: 0, fontSize: '1.75rem', fontWeight: 700, color: '#0F172A', outline: 'none', fontFamily: 'var(--font-title)', textAlign: 'center', background: 'transparent', transition: 'border-color 0.2s' }}
+        onFocus={e => e.target.style.borderColor = '#008ED3'}
+        onBlur={e => e.target.style.borderColor = '#E2E8F0'}
+      />
+      {suffix && <span style={{ fontSize: '0.75rem', color: '#64748B', fontWeight: 600 }}>{suffix}</span>}
+      <p style={{ fontSize: '0.72rem', color: '#CBD5E1', margin: 0 }}>exibido como <strong style={{ color: '#94A3B8' }}>+{form[field]}{suffix || ''}</strong></p>
     </div>
   );
 
@@ -52,7 +52,7 @@ export default function AdminStats() {
           <select
             value={form.powerUnit}
             onChange={e => setForm(p => ({ ...p, powerUnit: e.target.value }))}
-            style={{ padding: '10px 12px', border: '1.5px solid #E2E8F0', borderRadius: 8, fontSize: '0.9rem', outline: 'none', background: 'white', width: 200 }}
+            style={{ padding: '10px 12px', border: '1.5px solid #E2E8F0', borderRadius: 8, fontSize: '0.9rem', outline: 'none', background: 'white', width: 100 }}
           >
             {['kWp', 'MWp', 'kW', 'MW'].map(u => <option key={u} value={u}>{u}</option>)}
           </select>
