@@ -936,9 +936,8 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   .hero-col-text { flex: unset; }
   /* Título grande no mobile e texto justificado */
   .hero-title { font-size: clamp(2.4rem, 9vw, 3rem); text-align: justify; }
-  /* Fachada com mesma altura da solar no mobile */
-  .hero-img-fachada { width: 100%; height: 72vw; max-height: 340px; object-fit: contain; }
-  .hero-col-images img { width: 100%; height: 72vw; max-height: 340px; object-fit: contain; }
+  /* Fachada no mobile */
+  .hero-img-fachada { object-fit: contain; }
   .hero-desc { text-align: justify; }
   /* WhatsApp flutuante maior no mobile */
   .whatsapp-float { bottom: 20px; right: 16px; }
