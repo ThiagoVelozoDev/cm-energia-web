@@ -118,7 +118,7 @@ export default function Hero() {
               borderRadius: '1.5rem',
               boxShadow: '0 8px 32px rgba(0,0,0,0.13)',
               border: '4px solid var(--color-primary)',
-              background: 'var(--color-dark)',
+              background: '#fff',
             }}
           />
           <motion.img
