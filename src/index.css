@@ -952,6 +952,38 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
   .stats-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* ── Admin responsive ───────────────────────────────────────── */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.admin-service-row {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.admin-service-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+  .admin-service-row { padding: 14px 14px; gap: 10px; }
+  .admin-service-actions { width: 100%; justify-content: flex-end; }
+  .admin-service-actions button { flex: 1; justify-content: center; }
+}
+@media (max-width: 380px) {
+  .admin-stats-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Service card uniform height ────────────────────────────── */
 .service-card-fixed {
   display: flex;

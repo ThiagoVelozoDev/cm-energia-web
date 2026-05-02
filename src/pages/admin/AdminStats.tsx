@@ -40,7 +40,7 @@ export default function AdminStats() {
       </div>
 
       <form onSubmit={handleSave}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 16, marginBottom: 20 }}>
+        <div className="admin-stats-grid">
           {numInput('projects', 'Projetos Concluídos')}
           {numInput('clients', 'Clientes Atendidos')}
           {numInput('years', 'Anos de Experiência')}

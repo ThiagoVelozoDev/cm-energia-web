@@ -139,16 +139,16 @@ export default function AdminServices() {
               onCancel={() => setEditingId(null)}
             />
           ) : (
-            <div key={service.id} style={{ background: 'white', borderRadius: 12, padding: '16px 20px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', display: 'flex', alignItems: 'center', gap: 16 }}>
+            <div key={service.id} className="admin-service-row">
               <span style={{ fontSize: '1.75rem', lineHeight: 1 }}>{service.emoji}</span>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 2, flexWrap: 'wrap' }}>
                   <p style={{ fontFamily: 'var(--font-title)', fontSize: '0.9rem', color: '#0F172A', fontWeight: 700 }}>{service.title}</p>
                   {service.featured && <span style={{ fontSize: '0.65rem', padding: '2px 8px', background: '#FEF9C3', color: '#CA8A04', borderRadius: 999, fontWeight: 600 }}>DESTAQUE</span>}
                 </div>
                 <p style={{ fontSize: '0.8rem', color: '#64748B', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>{service.description}</p>
               </div>
-              <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+              <div className="admin-service-actions">
                 <button onClick={() => setEditingId(service.id)} style={{ padding: '7px 12px', background: '#EFF6FF', color: '#008ED3', border: 'none', borderRadius: 7, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontSize: '0.8rem' }}>
                   <Pencil size={13} /> Editar
                 </button>
