@@ -919,6 +919,13 @@ h1, h2, h3, h4 { font-family: var(--font-title); line-height: 1.15; letter-spaci
 @media (max-width: 768px) {
   .navbar-nav { display: none; }
   .navbar-menu-btn { display: flex; align-items: center; justify-content: center; }
+  /* Esconde botão CTA no header — já aparece no menu mobile */
+  .navbar-actions .btn { display: none; }
+  /* Ajusta altura e espaçamento do header */
+  .navbar-inner { height: 60px; gap: 0; justify-content: space-between; }
+  /* Logo menor no mobile */
+  .navbar-logo img { height: 32px !important; max-width: 130px !important; }
+  .navbar-logo-text { font-size: 0.95rem; }
   .footer-main { grid-template-columns: 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
   .steps-connector { display: none; }
